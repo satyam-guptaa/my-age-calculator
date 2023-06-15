@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<article>
+			<div className='calc-wrapper'>
+				<div className='calc-input-container'>
+					<div className='date-inputs'>
+						<label htmlFor='day'>Day</label>
+						<input type='text' id='day' className='input-field' />
+					</div>
+					<div className='date-inputs'>
+						<label htmlFor='month'>Month</label>
+						<input type='text' id='month' className='input-field' />
+					</div>
+					<div className='date-inputs'>
+						<label htmlFor='year'>Year</label>
+						<input type='text' id='year' className='input-field' />
+					</div>
+				</div>
+				<div className='calc-mid-container'>
+					<div className='horizontal-line'>
+						<button className='submit-btn' type='submit'>
+							<img src='/icon-arrow.svg' alt='down arrow' />
+						</button>
+					</div>
+				</div>
+			</div>
+		</article>
+	);
 }
 
-export default App
+export default App;
