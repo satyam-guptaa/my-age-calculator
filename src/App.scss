@@ -1,11 +1,14 @@
 .calc {
+    &-container {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
     &-wrapper {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        // width: 600px;
-        height: 600px;
+        width: 100%;
+        max-width: 800px;
         background-color: hsl(0, 0%, 100%);
         border-radius: 20px;
         border-bottom-right-radius: 150px;
@@ -26,21 +29,29 @@
                 letter-spacing: 3px;
             }
             input {
-                width: 155px;
+                max-width: 155px;
                 height: 65px;
                 outline: none;
                 padding: 15px;
                 font-size: 2rem;
                 border: 1px solid hsl(0, 0%, 86%);
                 border-radius: 8px;
+                transition: all 0.2s ease-in;
+
+                &:focus {
+                    border-color: hsl(259, 100%, 65%);
+                }
             }
         }
     }
 
     &-mid-container {
         margin-top: 50px;
+        margin-bottom: 50px;
+
         .horizontal-line {
             width: 700px;
+            max-width: 700px;
             position: relative;
             border: 1px solid hsl(0, 0%, 86%);
         }
@@ -49,7 +60,7 @@
             transform: translateY(-50%);
             right: -1px;
             border: none;
-            background-color: hsl(259, 95%, 70%);
+            background-color: hsl(259, 100%, 65%);
             width: 70px;
             height: 70px;
             border-radius: 50%;
@@ -58,8 +69,19 @@
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                background-color: hsla(259, 92%, 58%, 0.95);
+                background-color: hsl(0, 0%, 8%);
             }
+        }
+    }
+
+    &-result-container {
+        .result-data {
+            font-weight: 800;
+            font-size: 4rem;
+            margin: 3px 0;
+        }
+        .age-number {
+            color: hsl(259, 100%, 65%);
         }
     }
 }
