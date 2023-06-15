@@ -28,8 +28,11 @@
                 color: hsl(0, 1%, 44%);
                 letter-spacing: 3px;
             }
+            .onerror-label {
+                color: hsl(0, 100%, 67%);
+            }
             input {
-                max-width: 155px;
+                max-width: 170px;
                 height: 65px;
                 outline: none;
                 padding: 15px;
@@ -42,6 +45,26 @@
                     border-color: hsl(259, 100%, 65%);
                 }
             }
+            input[type=number] {
+                -moz-appearance: textfield;
+              }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            .onerror-input {
+                border-color: hsl(0, 100%, 67%);
+            }
+            p {
+                color: hsl(0, 100%, 67%);
+                margin: 5px 0;
+                font-size: 14px;
+                height: 10px;
+            }
+        }
+        .no-error-field {
+            visibility: hidden;
         }
     }
 
