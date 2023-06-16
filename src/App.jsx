@@ -71,9 +71,24 @@ function App() {
 					</div>
 				</div>
 				<div className='calc-result-container'>
-					<ResultData result={result.year} type='years' />
-					<ResultData result={result.month} type='months' />
-					<ResultData result={result.day} type='days' />
+					{result?.bday ? (
+						<>
+							<p className='result-data age-number'>Happy</p>
+							<p className='result-data'>Birthday!!</p>
+							<img
+								src='/ballons.svg'
+								width={100}
+								height={100}
+								alt=''
+							/>
+						</>
+					) : (
+						<>
+							<ResultData result={result.year} type='years' />
+							<ResultData result={result.month} type='months' />
+							<ResultData result={result.day} type='days' />
+						</>
+					)}
 				</div>
 			</div>
 		</article>

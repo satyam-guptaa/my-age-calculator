@@ -31,8 +31,7 @@ const validateAndCalculate = (dob) => {
 
 const ageCalculation = (dobDay, dobMonth, dobYear, now, yearNow) => {
 	const age = {};
-	//since month starts with 0 in Date
-	const monthNow = now.getMonth() + 1;
+	const monthNow = now.getMonth();
 	const dayNow = now.getDate();
 	//age year
 	age.year = yearNow - dobYear;
@@ -53,6 +52,15 @@ const ageCalculation = (dobDay, dobMonth, dobYear, now, yearNow) => {
 			age.year--;
 			age.month = 11;
 		}
+	}
+
+	if (
+		new Date().toDateString() ===
+		new Date(dobYear, dobMonth, dobDay).toDateString()
+	) {
+		age.bday = true;
+	} else {
+		age.bday = false;
 	}
 	return age;
 };
