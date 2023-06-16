@@ -98,8 +98,8 @@
             right: -1px;
             border: none;
             background-color: hsl(259, 100%, 65%);
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             padding: 10px;
             cursor: pointer;
@@ -114,7 +114,7 @@
     &-result-container {
         .result-data {
             font-weight: 800;
-            font-size: 4rem;
+            font-size: 5rem;
             margin: 3px 0;
         }
         .age-number {
