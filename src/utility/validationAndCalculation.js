@@ -11,13 +11,13 @@ const validateAndCalculate = (dob) => {
 		if (!dobMonth) errorObj.month = 'This field is Required';
 		if (!dobYear) errorObj.year = 'This field is Required';
 	}
-	if (dobDay > 31) {
+	if (dobDay > 31 || dobDay < 0) {
 		errorObj.day = 'Must be a valid day';
 	}
-	if (dobMonth > 12) {
+	if (dobMonth > 12 || dobMonth < 0) {
 		errorObj.month = 'Must be a valid month';
 	}
-	if (dobYear > yearNow) {
+	if (dobYear > yearNow || dobYear < 0) {
 		errorObj.year = 'Must be in past';
 	}
 
