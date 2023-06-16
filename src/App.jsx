@@ -45,7 +45,7 @@ function App() {
 			errorObj.day = 'Must be a valid day';
 		}
 		if (dobMonth > 12) {
-			errorObj.day = 'Must be a valid month';
+			errorObj.month = 'Must be a valid month';
 		}
 		if (dobYear > yearNow) {
 			errorObj.year = 'Must be in past';
