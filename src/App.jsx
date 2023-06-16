@@ -73,14 +73,9 @@ function App() {
 				<div className='calc-result-container'>
 					{result?.bday ? (
 						<>
-							<p className='result-data age-number'>Happy</p>
-							<p className='result-data'>Birthday!!</p>
-							<img
-								src='/ballons.svg'
-								width={100}
-								height={100}
-								alt=''
-							/>
+							<p className='result-data age-number'>Welcome</p>
+							<p className='result-data'>to the</p>
+							<p className='result-data'>World!!</p>
 						</>
 					) : (
 						<>
